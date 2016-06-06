@@ -1,5 +1,5 @@
 # built application files
-*.apk
+# *.apk
 *.ap_
 
 # Java class files
@@ -27,3 +27,4 @@ build/
 *ASUS_PC_01*
 
 !/FtcRobotController/build
+!/FtcRobotController/build/outputs/apk/FtcRobotController-release-unsigned.apk
