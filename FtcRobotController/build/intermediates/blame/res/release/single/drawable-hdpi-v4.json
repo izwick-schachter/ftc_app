@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
+        "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi/button_shape.xml"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-xhdpi-v4/ic_launcher.png",
+        "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-xhdpi-v4/icon_robotcontroller.png",
+        "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/drawable-xhdpi/icon_robotcontroller.png"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-xhdpi-v4/icon_menu.png",
+        "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/drawable-xhdpi/icon_menu.png"
+    }
+]
