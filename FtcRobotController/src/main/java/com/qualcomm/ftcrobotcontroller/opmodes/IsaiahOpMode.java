@@ -102,8 +102,8 @@ public class IsaiahOpMode extends OpMode {
 		pan = (float)scaleInput(pan);
 		power = (float)scaleInput(power);
 
-		float rightPower = Range.clip(power+pan, -1, 1);
-		float leftPower = Range.clip(power-pan, -1, 1);
+		float rightPower = Range.clip(power-pan, -1, 1);
+		float leftPower = Range.clip(power+pan, -1, 1);
 		// write the values to the motors
 		frontRight.setPower(rightPower);
 		backRight.setPower(rightPower);
@@ -116,8 +116,8 @@ public class IsaiahOpMode extends OpMode {
 		 * will return a null value. The legacy NXT-compatible motor controllers
 		 * are currently write only.
 		 */
-        telemetry.addData("Left Side Power: ", String.format("%.2f", -power*pan));
-        telemetry.addData("Right Side Power: ", String.format("%.2f", power*pan));
+        telemetry.addData("Left Side Power: ", String.format("%.2f", leftPower));
+        telemetry.addData("Right Side Power: ", String.format("%.2f", rightPower));
 
 	}
 
