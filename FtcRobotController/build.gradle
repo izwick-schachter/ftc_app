@@ -1,12 +1,28 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        test {
+            keyAlias 'test'
+            keyPassword 'testtest'
+            storeFile file('/home/isaiah/Desktop/Robotics Club/keystore.jks')
+            storePassword 'testtest'
+        }
+    }
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 19
     }
     compileSdkVersion 19
     buildToolsVersion '21.1.2'
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.test
+        }
+        release {
+            signingConfig signingConfigs.test
+        }
+    }
 }
 
 buildscript {
@@ -37,7 +53,7 @@ allprojects {
 }
 
 dependencies {
-//    compile files('libs/android-support-v4.jar')
+    //    compile files('libs/android-support-v4.jar')
     compile(name: 'RobotCore-release', ext: 'aar')
     compile(name: 'Hardware-release', ext: 'aar')
     compile(name: 'FtcCommon-release', ext: 'aar')

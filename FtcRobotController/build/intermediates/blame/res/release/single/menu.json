@@ -2,5 +2,9 @@
     {
         "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/menu/ftc_robot_controller.xml",
         "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/menu/ftc_robot_controller.xml"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/build/intermediates/res/merged/release/menu/ftc_robot_controller.xml",
+        "source": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/src/main/res/menu/ftc_robot_controller.xml"
     }
 ]

@@ -2,5 +2,9 @@
     {
         "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-mdpi-v4/ic_launcher.png",
         "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/build/intermediates/res/merged/release/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/src/main/res/drawable-mdpi/ic_launcher.png"
     }
 ]

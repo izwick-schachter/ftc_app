@@ -33,7 +33,6 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
 /**
@@ -41,7 +40,7 @@ import com.qualcomm.robotcore.util.Range;
  * <p>
  * Enables control of the robot via the gamepad
  */
-public class IsaiahOpMode extends OpMode {
+public class MotorCheck extends OpMode {
 
 	DcMotor frontRight;
 	DcMotor frontLeft;
@@ -51,7 +50,7 @@ public class IsaiahOpMode extends OpMode {
 	/**
 	 * Constructor
 	 */
-	public IsaiahOpMode() {
+	public MotorCheck() {
 
 	}
 
@@ -91,21 +90,25 @@ public class IsaiahOpMode extends OpMode {
 		// 1 is full down
 		// direction: left_stick_x ranges from -1 to 1, where -1 is full left
 		// and 1 is full right
-		float power = gamepad1.left_stick_y;
-		float pan = gamepad1.left_stick_x;
+		float throttle = -gamepad1.left_stick_y;
+		float direction = gamepad1.left_stick_x;
+		float right = throttle - direction;
+		float left = throttle + direction;
 
 		// clip the right/left values so that the values never exceed +/- 1
-		pan = Range.clip(pan, -1, 1);
+		right = Range.clip(right, -1, 1);
+		left = Range.clip(left, -1, 1);
 
 		// scale the joystick value to make it easier to control
 		// the robot more precisely at slower speeds.
-		pan = (float)scaleInput(pan);
+		right = (float)scaleInput(right);
+		left =  (float)scaleInput(left);
 
 		// write the values to the motors
-		frontRight.setPower(power*pan);
-		backRight.setPower(power*pan);
-		frontLeft.setPower(-power*pan);
-		backLeft.setPower(-power*pan);
+		frontRight.setPower(right);
+		backRight.setPower(right);
+		frontLeft.setPower(left);
+		backLeft.setPower(left);
 
 		/*
 		 * Send telemetry data back to driver station. Note that if we are using
@@ -113,8 +116,9 @@ public class IsaiahOpMode extends OpMode {
 		 * will return a null value. The legacy NXT-compatible motor controllers
 		 * are currently write only.
 		 */
-        telemetry.addData("Left Side Power: ", String.format("%.2f", -power*pan));
-        telemetry.addData("Right Side Power: ", String.format("%.2f", power*pan));
+        telemetry.addData("Text", "*** Robot Data***");
+        telemetry.addData("left tgt pwr",  "left  pwr: " + String.format("%.2f", left));
+        telemetry.addData("right tgt pwr", "right pwr: " + String.format("%.2f", right));
 
 	}
 

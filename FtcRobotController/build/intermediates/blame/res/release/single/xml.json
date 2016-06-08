@@ -6,5 +6,13 @@
     {
         "merged": "/home/isaiah/Desktop/ftc_app/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
         "source": "/home/isaiah/Desktop/ftc_app/FtcRobotController/src/main/res/xml/device_filter.xml"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/src/main/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
+        "source": "/home/isaiah/Desktop/Robotics Club/ftc_app/FtcRobotController/src/main/res/xml/device_filter.xml"
     }
 ]
