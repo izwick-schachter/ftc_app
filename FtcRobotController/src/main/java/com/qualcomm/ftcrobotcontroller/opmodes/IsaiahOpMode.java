@@ -91,7 +91,7 @@ public class IsaiahOpMode extends OpMode {
 		// 1 is full down
 		// direction: left_stick_x ranges from -1 to 1, where -1 is full left
 		// and 1 is full right
-		float power = gamepad1.left_stick_y;
+		float power = -gamepad1.left_stick_y;
 		float pan = gamepad1.left_stick_x;
 
 		// clip the right/left values so that the values never exceed +/- 1
