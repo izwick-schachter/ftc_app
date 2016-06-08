@@ -41,7 +41,7 @@ import com.qualcomm.robotcore.util.Range;
  * <p>
  * Enables control of the robot via the gamepad
  */
-public class IsaiahOpMode extends OpMode {
+public class LeftStickDrive extends OpMode {
 
 	DcMotor frontRight;
 	DcMotor frontLeft;
@@ -51,7 +51,7 @@ public class IsaiahOpMode extends OpMode {
 	/**
 	 * Constructor
 	 */
-	public IsaiahOpMode() {
+	public LeftStickDrive() {
 
 	}
 
