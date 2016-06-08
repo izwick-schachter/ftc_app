@@ -80,13 +80,12 @@ public class IsaiahOpMode extends OpMode {
 	@Override
 	public void loop() {
 
-		/*
-		 * Gamepad 1
-		 *
-		 * Gamepad 1 controls the motors via the left stick, and it controls the
-		 * wrist/claw via the a,b, x, y buttons
-		 */
+		// Motor Tests based on buttons
 
+		boolean y = gamepad1.y;
+		boolean x = gamepad1.x;
+		boolean a = gamepad1.a;
+		boolean b = gamepad1.b;
 		// throttle: left_stick_y ranges from -1 to 1, where -1 is full up, and
 		// 1 is full down
 		// direction: left_stick_x ranges from -1 to 1, where -1 is full left
@@ -105,11 +104,19 @@ public class IsaiahOpMode extends OpMode {
 		float rightPower = Range.clip(power-pan, -1, 1);
 		float leftPower = Range.clip(power+pan, -1, 1);
 		// write the values to the motors
+
+		if (x) {
+			leftPower = -leftPower;
+		} else if (b) {
+			rightPower = -rightPower;
+		} else if (a){
+			rightPower = -rightPower;
+			leftPower = -leftPower;
+		}
 		frontRight.setPower(rightPower);
 		backRight.setPower(rightPower);
 		frontLeft.setPower(leftPower);
 		backLeft.setPower(leftPower);
-
 		/*
 		 * Send telemetry data back to driver station. Note that if we are using
 		 * a legacy NXT-compatible motor controller, then the getPower() method
