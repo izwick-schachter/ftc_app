@@ -96,16 +96,19 @@ public class IsaiahOpMode extends OpMode {
 
 		// clip the right/left values so that the values never exceed +/- 1
 		pan = Range.clip(pan, -1, 1);
-
+		power = Range.clip(power, -1, 1);
 		// scale the joystick value to make it easier to control
 		// the robot more precisely at slower speeds.
 		pan = (float)scaleInput(pan);
+		power = (float)scaleInput(power);
 
+		float rightPower = Range.clip(power+pan, -1, 1);
+		float leftPower = Range.clip(power-pan, -1, 1);
 		// write the values to the motors
-		frontRight.setPower(power*pan);
-		backRight.setPower(power*pan);
-		frontLeft.setPower(-power*pan);
-		backLeft.setPower(-power*pan);
+		frontRight.setPower(rightPower);
+		backRight.setPower(rightPower);
+		frontLeft.setPower(leftPower);
+		backLeft.setPower(leftPower);
 
 		/*
 		 * Send telemetry data back to driver station. Note that if we are using
